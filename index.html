@@ -18,21 +18,19 @@
             render: function() {
               return(
                 <div>
-                    <h2> {this.props.player} is named {this.props.name}.  </h2>
-                    <h2> {this.props.player} is named {this.props.name}.  </h2>
-                    <h2> {this.props.player} is named {this.props.name}.  </h2>
+                    <h2> {this.props.name} </h2>
+                    <p> {this.props.children} </p>
                 </div>
 
               );
             }
         });
-
+        //children are anything that's inbetween the starting and ending tags here.
         React.render(
           <div>
+            <CodysComponent name="Joshua"> is a great guy. </CodysComponent>
+            <CodysComponent name="Sandy"> is a great gal. </CodysComponent>
 
-            <CodysComponent player="Player 1" name="Joshua"/>
-            <CodysComponent player="Player 2" name="Sandy"/>
-            <CodysComponent player="Player 3" name="Henry"/>
 
           </div>,
              document.getElementById('content')
